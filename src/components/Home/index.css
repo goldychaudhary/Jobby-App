@@ -1,0 +1,22 @@
+.home-main-bg {
+  min-height: 100vh;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-content-bg {
+  width: 40%;
+  height: 50vh;
+  margin: 30px;
+}
+.home-content-bg {
+  color: white;
+  font-family: Roboto;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.home-sub-heading {
+  font-size: 18px;
+  margin-top: 0px;
+}

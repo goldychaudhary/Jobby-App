@@ -1,0 +1,40 @@
+.login-bg {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #272727;
+  min-height: 50vh;
+  min-width: 50vh;
+  padding: 30px;
+}
+
+.form-logo {
+  height: 40px;
+  width: 100px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.input-label {
+  font-size: 10px;
+  font-family: Roboto;
+  margin-bottom: 5px;
+}
+.input-elem {
+  width: 100%;
+  margin-bottom: 13px;
+}
+.login {
+  width: 100%;
+}
+.error {
+  font-size: 10px;
+  color: red;
+}
