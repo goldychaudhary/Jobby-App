@@ -1,3 +1,7 @@
+.jobs-list-container {
+  list-style: none;
+  padding-left: 0px;
+}
 .jobs-main-bg {
   display: flex;
   background-color: black;
@@ -13,7 +17,7 @@
 }
 .jobs-list-bg {
   width: 70%;
-  background-color: antiquewhite;
+  padding: 20px;
 }
 .profile-container {
   border-radius: 10px;
@@ -24,7 +28,8 @@
   background-size: cover;
 }
 .line {
-  color: white;
+  border-color: #475569;
+  border-style: solid;
   width: 100%;
 }
 
@@ -38,4 +43,79 @@
 .type-heading {
   color: white;
   font-size: 12px;
+}
+.failed-profile-bg {
+  background-image: none;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bg-sm {
+  display: none;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #475569;
+  border-radius: 5px;
+}
+.input-field {
+  width: 90%;
+  height: 100%;
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  outline: none;
+}
+.search-icon {
+  color: #475569;
+  margin-right: 3px;
+}
+.search-btn {
+  background-color: transparent;
+  border-style: none;
+}
+.name {
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+@media screen and (max-width: 767px) {
+  .jobs-main-bg {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .profile-container {
+    width: 90vw;
+    flex-grow: inherit;
+  }
+  .filters-main-bg {
+    width: 90vw;
+  }
+  .line {
+    width: 90vw;
+  }
+  .search-bg-lg {
+    display: none;
+  }
+  .search-bg-sm {
+    display: block;
+    width: 90vw;
+    margin-bottom: 10px;
+  }
+  .search-container {
+    width: 100%;
+  }
+}
+.no-jobs-container {
+  color: white;
 }

@@ -1,8 +1,13 @@
 import './index.css'
 
 const NotFound = () => (
-  <div>
-    <h1>Not found</h1>
+  <div className="not-found-main-bg">
+    <img
+      src="https://assets.ccbp.in/frontend/react-js/jobby-app-not-found-img.png"
+      alt="not found"
+    />
+    <h1>Page Not Found</h1>
+    <p>we&apos;re sorry, the page you requested could not be found</p>
   </div>
 )
 

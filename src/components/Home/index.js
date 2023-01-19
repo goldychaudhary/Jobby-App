@@ -1,14 +1,10 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 import Header from '../Header'
 import './index.css'
 
 class Home extends Component {
-  findJobs = () => {
-    const {history} = this.props
-    history.push('/jobs')
-  }
-
   render() {
     return (
       <div className="home-main-bg">
@@ -22,9 +18,11 @@ class Home extends Component {
             company reviews. Find the job that fits your abilities and
             potential.
           </p>
-          <button className="btn" type="button" onClick={this.findJobs}>
-            Find Jobs
-          </button>
+          <Link to="/jobs">
+            <button className="btn" type="button">
+              Find Jobs
+            </button>
+          </Link>
         </div>
       </div>
     )

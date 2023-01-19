@@ -1,0 +1,128 @@
+body {
+  margin: 0px;
+}
+.job-details-main-bg {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jobs-details-container {
+  background-color: #272727;
+  padding: 20px;
+  width: 80%;
+  color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.company-logo-container {
+  display: flex;
+}
+.job-name-container {
+  margin-left: 10px;
+}
+.company-logo {
+  height: 30px;
+  width: 30px;
+}
+.job-card-name {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.rating-para {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.location-type-salary-container {
+  display: flex;
+}
+.icon-plus-para {
+  display: flex;
+  align-items: center;
+}
+.package {
+  margin-left: auto;
+}
+.location {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.star-icons {
+  color: goldenrod;
+}
+
+.jobs-list-container {
+  list-style: none;
+  padding-left: 0px;
+}
+.company-url-container {
+  display: flex;
+  justify-content: space-between;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 250px;
+}
+.skill-pic {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+.website-external-link-cotainer {
+  color: #6366f1;
+  font-size: 10px;
+}
+.external-link {
+  text-decoration: none;
+  color: #6366f1;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.description-para {
+  font-size: 14px;
+  font-family: Roboto;
+  margin-bottom: 30px;
+}
+.life-at-company-container {
+  display: flex;
+}
+.lifeAtCompany-pic-bg {
+  margin-left: 10px;
+}
+.similar-jobs-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  list-style: none;
+  padding: 0px;
+}
+.similar {
+  width: 32%;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.life-at-c {
+  margin-top: 60px;
+}
+.similar-jobs-heading-container {
+  width: 80%;
+  margin-top: 80px;
+  color: white;
+  font-size: 20px;
+}
