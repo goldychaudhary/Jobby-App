@@ -6,7 +6,7 @@ import Cookies from 'js-cookie'
 import './index.css'
 
 class JobDetails extends Component {
-  state = {jobDetails: {}, skills: [], similarJobsList: []}
+  state = {jobDetails: {}, skills: [], similarJobsList: [], apiFail: false}
 
   componentDidMount() {
     this.getJobDetails()
@@ -18,15 +18,17 @@ class JobDetails extends Component {
     const {id} = params
 
     const jwtToken = Cookies.get('jwt_token')
+    const url = `https://apis.ccbp.in/jobs/${id}`
+
     const options = {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
     }
-    const response = await fetch(`https://apis.ccbp.in/jobs/${id}`, options)
+    const response = await fetch(url, options)
     const data = await response.json()
-    console.log(data)
+
     if (response.ok) {
       const updatedJobsDetails = {
         companyLogo: data.job_details.company_logo_url,
@@ -62,14 +64,13 @@ class JobDetails extends Component {
         skills: skillsList,
         similarJobsList: similarJobs,
       })
-    }
-    if (response.ok === false) {
-      this.renderApiFailureView()
+    } else {
+      this.setState({apiFail: true})
     }
   }
 
   renderApiFailureView = () => (
-    <div>
+    <div className="failure-view-main-bg">
       <img
         src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
         alt="failure view"
@@ -141,10 +142,14 @@ class JobDetails extends Component {
   )
 
   render() {
-    const {jobDetails, skills, similarJobsList} = this.state
+    const {jobDetails, skills, similarJobsList, apiFail} = this.state
+
+    if (apiFail === true) {
+      return this.renderApiFailureView()
+    }
 
     return (
-      <ul className="job-details-main-bg">
+      <div className="job-details-main-bg">
         <div className="jobs-details-container">
           <div className="company-logo-container">
             <img
@@ -204,7 +209,7 @@ class JobDetails extends Component {
         <ul className="similar-jobs-container">
           {similarJobsList.map(each => this.renderSimilarJobs(each))}
         </ul>
-      </ul>
+      </div>
     )
   }
 }

@@ -88,6 +88,10 @@
   font-family: Roboto;
 }
 
+.no-jobs-container{
+    color:white;
+}
+
 @media screen and (max-width: 767px) {
   .jobs-main-bg {
     display: flex;

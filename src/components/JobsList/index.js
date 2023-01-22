@@ -16,21 +16,6 @@ const JobList = props => {
     jobDescription,
     id,
   } = details
-  console.log('details', details)
-
-  //   renderNoJobs = () => (
-  //     <div className="no-jobs-container">
-  //       <p>No jobs</p>
-  //     </div>
-  //   )
-
-  //   if (details.length === 0) {
-  //     return (
-  //       <div>
-  //         <p>No jobs</p>
-  //       </div>
-  //     )
-  //   }
 
   return (
     <Link className="link" to={`/jobs/${id}`}>
