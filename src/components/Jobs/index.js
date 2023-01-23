@@ -152,7 +152,7 @@ class Jobs extends Component {
 
   onProfileApiFailure = () => (
     <div className="profile-container failed-profile-bg">
-      <button className="btn" onClick={this.renderProfile()} type="button">
+      <button className="btn" onClick={this.renderProfile} type="button">
         Retry
       </button>
     </div>
@@ -217,7 +217,7 @@ class Jobs extends Component {
         />
 
         <button
-          //   testid="searchButton"
+          testid="searchButton"
           className="search-btn"
           type="button"
           onClick={this.getJobsList}
@@ -242,7 +242,7 @@ class Jobs extends Component {
       />
       <h1>Oops! Something Went Wrong</h1>
       <p>We cannot seem to find the page you are looking for</p>
-      <button className="btn" onClick={this.getJobsList()} type="button">
+      <button className="btn" onClick={this.getJobsList} type="button">
         Retry
       </button>
     </div>
